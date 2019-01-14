@@ -6,6 +6,8 @@ import 'ui/ajudante_bd.dart';
 List _todosUsuarios;
 void main() async {
   var db = new BDadosAjudante();
+  int usuarioSalvo = await db.inserirUsuario(new Usuario("Andre","paulo"));
+  print("Usuario foi inserido $usuarioSalvo");
   //await db.inserirUsuario(new Usuario("Angela", "leandrollll"));
 
    //Todos usuarios

@@ -1,11 +1,10 @@
 import 'dart:async';
 import 'dart:io';
-
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
-
 import '../modelos/Usuario.dart';
+
 
 class BDadosAjudante {
   static final BDadosAjudante _instance = new BDadosAjudante.internal();
@@ -17,14 +16,6 @@ class BDadosAjudante {
   final String colunaNome = "nome";
   final String colunaSenha = "senha";
 
-  /*
-     tabelaUsuario
-     -------------------
-      id | nome | senha
-      -------------------
-      1 | Joao | "riodejaneiro"
-      ....
-   */
   static Database _db;
 
   Future<Database> get db async {
